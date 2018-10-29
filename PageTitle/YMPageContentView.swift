@@ -105,14 +105,14 @@ extension YMPageContentView : UICollectionViewDataSource {
 // MARK:- 遵守UICollectionViewDelegate
 extension YMPageContentView : UICollectionViewDelegate {
     
-    private func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+    public func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         
         isForbidScrollDelegate = false
         
         startOffsetX = scrollView.contentOffset.x
     }
     
-    private func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
         // 0.判断是否是点击事件
         if isForbidScrollDelegate { return }
